@@ -1,0 +1,102 @@
+html {
+	font-family: Helvetica, sans-serif;	
+	font-size: 100%; /* This is a comment */
+}
+
+body {
+	padding: 20px 70px;
+}
+
+h1{
+  margin-top: 50px;
+  margin-bottom: 10px;
+  font-size: 100px;
+  text-align: center;
+	color: black;
+  font-weight: bold;
+	border-bottom: 3px;
+}
+
+h2{
+  margin-top: 10px;
+  margin-bottom: 50px;
+	font-size: 30px;
+	font-weight: lighter;
+	border-bottom: 3px;
+  text-align: center;
+	color: black;
+}
+.outer-div
+{
+     padding-left: 30px;
+     padding-right: 30px;
+     padding-top: 10px;
+     text-align: center;
+}
+
+#inputBox {
+     margin:  auto;
+     margin-top: 50px;
+  margin-bottom: 50px;
+     width: 700px; 
+}
+
+input.inputTime {
+
+  text-align: center;
+  width: 80px; 
+  height: 40px;
+  font-size:30pt;
+  
+}
+
+
+#timebox{
+  text-align: center;
+  margin: auto;
+  margin-bottom: 50px;
+  width: 100px;
+}
+
+#time{
+  font-size: 170px
+}
+
+
+input.button {
+  width: 100px; 
+  height: 70px;
+	font-size: 30px;
+  border: none;
+	color: white;
+	margin-left 50px;
+	text-align: center;
+	background: #AAA;
+  
+}
+
+
+button:hover {
+	opacity: 0.75;
+	cursor: pointer;
+}
+
+textarea {
+	width: 50%;
+	padding: 0.5rem;
+	font-size: 20px;
+	border: 1px solid #aaa;
+	border-radius: 3px;
+	min-height: 350px;
+	margin: 20px;
+  resize: vertical;
+}
+
+#startButton {
+  margin-left: 20px;
+}
+
+#stopButton {
+  width: 640px;
+  height: 50px;
+}
