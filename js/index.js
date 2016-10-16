@@ -51,9 +51,9 @@ function startClock(h, m, s, id) {
     remain = 1;
   }
 
-  console.log("today = " + today);
-  console.log("inputTime = " + inputTime);
-  console.log("remain = " + remain);
+  //console.log("today = " + today);
+  //console.log("inputTime = " + inputTime);
+  //console.log("remain = " + remain);
 
   //var total = +h * 3600 + +m * 60 + +s;
   //console.log("total time = " + total)
@@ -69,9 +69,9 @@ function startClock(h, m, s, id) {
   timeInterval = setInterval(function() {
 
     var now = new Date();
-    console.log("now = " + now);
+    //console.log("now = " + now);
     hours = now.getHours();
-    console.log("remaining time = " + timer);
+    //console.log("remaining time = " + timer);
     minutes = now.getMinutes();
     seconds = now.getSeconds();;
 
