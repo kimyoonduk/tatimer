@@ -1,94 +1,114 @@
 html {
-	font-family: Helvetica, sans-serif;	
-	font-size: 100%; /* This is a comment */
+  font-family: Helvetica, sans-serif;
+  font-size: 100%;
+  /* This is a comment */
 }
 
 body {
-	padding: 20px 70px;
+  padding: 20px 70px;
 }
 
-h1{
+h1 {
   margin-top: 50px;
   margin-bottom: 10px;
   font-size: 100px;
   text-align: center;
-	color: black;
+  color: black;
   font-weight: bold;
-	border-bottom: 3px;
+  border-bottom: 3px;
 }
 
-h2{
-  margin-top: 10px;
-  margin-bottom: 50px;
-	font-size: 30px;
-	font-weight: lighter;
-	border-bottom: 3px;
+h2 {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-size: 20px;
+  border-bottom: 3px;
   text-align: center;
-	color: black;
+  color: #767676;
 }
-.outer-div
-{
-     padding-left: 30px;
-     padding-right: 30px;
-     padding-top: 10px;
-     text-align: center;
+
+.outer-div {
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
+}
+
+#instructBox {
+  margin: auto;
+  margin-bottom: 10px;
+  width: 450px;
+  text-align: left;
+}
+
+#inputFrame {
+  height: 200px;
 }
 
 #inputBox {
-     margin:  auto;
-     margin-top: 50px;
+  margin: auto;
+  margin-top: 50px;
   margin-bottom: 50px;
-     width: 700px; 
+  width: 700px;
 }
 
 input.inputTime {
-
   text-align: center;
-  width: 80px; 
+  width: 80px;
   height: 40px;
-  font-size:30pt;
-  
+  font-size: 30pt;
 }
 
-
-#timebox{
-  text-align: center;
-  margin: auto;
-  margin-bottom: 50px;
-  width: 100px;
+#time {
+  font-size: 130px;
+  margin-bottom: 20px;
 }
 
-#time{
-  font-size: 170px
+#timeEnd {
+  margin-left: auto;
+  font-size: 60px
 }
 
+#allProgress {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: 605px;
+  height: 12px;
+  background-color: grey;
+}
+
+#curProgress {
+  position: absolute;
+  width: 1%;
+  height: 100%;
+  background-color: #5cb1f2;
+}
 
 input.button {
-  width: 100px; 
+  width: 100px;
   height: 70px;
-	font-size: 30px;
+  font-size: 30px;
   border: none;
-	color: white;
-	margin-left 50px;
-	text-align: center;
-	background: #AAA;
-  
+  color: white;
+  margin-left 50px;
+  text-align: center;
+  background: #AAA;
 }
 
-
-button:hover {
-	opacity: 0.75;
-	cursor: pointer;
+.button:hover {
+  opacity: 0.70;
+  cursor: pointer;
 }
 
 textarea {
-	width: 50%;
-	padding: 0.5rem;
-	font-size: 20px;
-	border: 1px solid #aaa;
-	border-radius: 3px;
-	min-height: 350px;
-	margin: 20px;
+  width: 600px;
+  padding: 0.5rem;
+  font-size: 24px;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  min-height: 320px;
+  margin: 20px;
   resize: vertical;
 }
 
@@ -97,6 +117,8 @@ textarea {
 }
 
 #stopButton {
-  width: 640px;
-  height: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 420px;
+  height: 60px;
 }

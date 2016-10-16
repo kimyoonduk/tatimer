@@ -2,7 +2,7 @@
 <html >
   <head>
     <meta charset="UTF-8">
-    <title>TA_Timer</title>
+    <title>TA Timer</title>
     
     
     
@@ -12,39 +12,68 @@
     
     
     
+    
   </head>
 
   <body>
 
-    <h1 class="title">
+    <div class="outer-div">
+  <div id="instructBox">
+
+<h1 class="title">
   TA Timer
 </h1>
-<h2 class="subtitle">
-Simple timer that works
+
+
+
+    <h2 class="subtitle">
+  Instructions
 </h2>
 
-<div class="outer-div">
-   <div id="inputBox">
-   <input type="text" placeholder="HH"class ="inputTime" id="hours" /> <input type="text" placeholder="MM" class ="inputTime" id="minutes" /> <input type="text" placeholder="SS" class ="inputTime" id="seconds" /> <input type="button" class="button" value="Start" id="startButton" onclick="giveInput()" />
+    <p>
+      1. Enter the time you want the timer to end in a 24-hour format.<br> &nbsp &nbsp e.g. 5pm = 17:00:00</p>
+    <p>
+      2. Type anything you need inside the text box below.
+
+    </p>
+  </div>
+</div>
+
+
+<div class="outer-div" id="inputFrame">
+  <div id="inputBox">
+    <input type="text" placeholder="HH" class="inputTime" id="hours" /> <input type="text" placeholder="MM" class="inputTime" id="minutes" /> <input type="text" placeholder="SS" class="inputTime" id="seconds" /> <input type="button" class="button" value="Start"
+      id="startButton" onclick="giveInput()" />
 
   </div>
-    <input type="button" class="button" id="stopButton" value="Stop" onclick="stopTimer()" style="display:none;"/>
+  <input type="button" class="button" id="stopButton" value="Stop" onclick="stopTimer()" style="display:none;" />
+
 </div>
 
 <div class="outer-div">
-  <div id"timebox"><span id="time">00:00:00    </span>       </div>
+  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+  <span id="timeEnd">00:00:00</span> <br> <br>
+  <span id="time">00:00:00</span>
+  <br>
 </div>
 
-      <div class="outer-div">
 
-        <form id="messages-form">
-  <textarea id="message" placeholder="Type your message here" required></textarea>
-</form>
+<div align="center" id="allProgress">
+  <div id="curProgress"></div>
+</div>
+
+
+<div class="outer-div">
+
+  <form id="messages-form">
+    <textarea id="message" placeholder="Type your message here" required></textarea>
+  </form>
+</div>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js'></script>
 
         <script src="js/index.js"></script>
 
-    
     
     
   </body>
