@@ -21,9 +21,13 @@ h1 {
 h2 {
   margin-top: 20px;
   margin-bottom: 5px;
-  font-size: 20px;
+  font-size: 24px;
   border-bottom: 3px;
   text-align: center;
+  color: #767676;
+}
+
+.instructions {
   color: #767676;
 }
 
@@ -41,13 +45,18 @@ h2 {
 }
 
 #inputFrame {
-  height: 200px;
+  height: 150px;
+}
+
+#modeSelect {
+  height: 80px;
 }
 
 #inputBox {
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   width: 700px;
 }
 
@@ -65,7 +74,7 @@ input.inputTime {
 
 #timeEnd {
   margin-left: auto;
-  font-size: 60px
+  font-size: 60px;
 }
 
 #allProgress {
@@ -91,7 +100,6 @@ input.button {
   font-size: 30px;
   border: none;
   color: white;
-  margin-left 50px;
   text-align: center;
   background: #AAA;
 }
@@ -113,7 +121,9 @@ textarea {
 }
 
 #startButton {
-  margin-left: 20px;
+  width: 120px;
+  height: 46px;
+  padding-top: 9px;
 }
 
 #stopButton {
@@ -121,4 +131,23 @@ textarea {
   margin-bottom: 50px;
   width: 420px;
   height: 60px;
+}
+
+#stopWatch {
+  margin-bottom: 20px;
+  width: 193px;
+  height: 35px;
+  font-size: 20px;
+  background: #515151;
+}
+
+#countDown {
+  margin-bottom: 20px;
+  width: 193px;
+  height: 35px;
+  font-size: 20px;
+}
+
+#modeSelect {
+  height: 40px;
 }

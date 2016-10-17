@@ -2,7 +2,7 @@
 <html >
   <head>
     <meta charset="UTF-8">
-    <title>TA_Timer_v1.1</title>
+    <title>TA Timer</title>
     
     
     
@@ -20,20 +20,23 @@
     <div class="outer-div">
   <div id="instructBox">
 
-<h1 class="title">
+    <h1 class="title">
   TA Timer
 </h1>
-
-
 
     <h2 class="subtitle">
   Instructions
 </h2>
 
-    <p>
-      1. Enter the time you want the timer to end in a 24-hour format.<br> &nbsp &nbsp e.g. 5pm = 17:00:00</p>
-    <p>
-      2. Type anything you want inside the text box below.
+    <p class="instructions">
+      1. Please choose your preferred mode.<br> <br>&nbsp &nbsp <strong>Stopwatch</strong>: Counts up to a given point in time (24-hr).
+      <br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp e.g. 5 pm = 17:00:00<br><br> &nbsp &nbsp <strong>Countdown</strong>: Counts down from the given time amount.
+    </p>
+
+    <p class="instructions">
+      2. Enter the endtime / countdown amount.</p>
+    <p class="instructions">
+      3. Type anything you want inside the text box below.
 
     </p>
   </div>
@@ -42,6 +45,13 @@
 
 <div class="outer-div" id="inputFrame">
   <div id="inputBox">
+
+    <div id="modeSelect">
+      <input type="button" class="button" value="Stopwatch" id="stopWatch" onclick="stopWatch()" />
+
+      <input type="button" class="button" value="Countdown" id="countDown" onclick="countDown()" />
+    </div>
+
     <input type="text" placeholder="HH" class="inputTime" id="hours" /> <input type="text" placeholder="MM" class="inputTime" id="minutes" /> <input type="text" placeholder="SS" class="inputTime" id="seconds" /> <input type="button" class="button" value="Start"
       id="startButton" onclick="giveInput()" />
 
@@ -50,17 +60,20 @@
 
 </div>
 
-<div class="outer-div">
+<div class="outer-div" id="timeBox" style="display:none;">
   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
   <span id="timeEnd">00:00:00</span> <br> <br>
   <span id="time">00:00:00</span>
   <br>
-</div>
 
-
-<div align="center" id="allProgress">
+<div id="allProgress">
   <div id="curProgress"></div>
 </div>
+  
+</div>
+
+
+
 
 
 <div class="outer-div">
