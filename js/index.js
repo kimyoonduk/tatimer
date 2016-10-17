@@ -1,5 +1,6 @@
 var timeInterval;
 var modeVal = 0;
+var textSize = 10;
 
 function giveInput() {
   var hours = document.getElementById('hours').value;
@@ -181,4 +182,28 @@ function stopWatch() {
   document.getElementById("countDown").style.backgroundColor = "#AAA";
   modeVal = 0;
 
+}
+
+function textPlus() {
+  textSize += 1;
+  changeText();
+}
+
+function textMinus() {
+  textSize -= 1;
+  changeText();
+}
+
+function changeText() {
+    if (textSize == 11) {
+  document.getElementById("message").style.fontSize = "36px"; 
+  } else if (textSize == 12) {
+    document.getElementById("message").style.fontSize = "48px"; 
+  } else if (textSize == 10) {
+    document.getElementById("message").style.fontSize = "24px"; 
+  } else if (textSize == 9) {
+    document.getElementById("message").style.fontSize = "16px"; 
+  } else if (textSize == 8) {
+    document.getElementById("message").style.fontSize = "12px"; 
+  } 
 }

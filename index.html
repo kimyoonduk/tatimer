@@ -29,7 +29,7 @@
 </h2>
 
     <p class="instructions">
-      1. Please choose your preferred mode.<br> <br>&nbsp &nbsp <strong>Stopwatch</strong>: Counts up to a given point in time (24-hr).
+      1. Please select your preferred mode.<br> <br>&nbsp &nbsp <strong>Stopwatch</strong>: Counts up to a given point in time (24-hr).
       <br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp e.g. 5 pm = 17:00:00<br><br> &nbsp &nbsp <strong>Countdown</strong>: Counts down from the given time amount.
     </p>
 
@@ -37,8 +37,9 @@
       2. Enter the endtime / countdown amount.</p>
     <p class="instructions">
       3. Type anything you want inside the text box below.
-
     </p>
+    <p class="instructions">
+      4. You can adjust the text size by pressing the + and - buttons.</p>
   </div>
 </div>
 
@@ -81,6 +82,11 @@
   <form id="messages-form">
     <textarea id="message" placeholder="Type your message here" required></textarea>
   </form>
+  <div id="textSize">
+     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+        <input type="button" class="button" value="+" id="textPlus" onclick="textPlus()" />
+      <input type="button" class="button" value="-" id="textMinus" onclick="textMinus()" />
+  </div>
 </div>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js'></script>
