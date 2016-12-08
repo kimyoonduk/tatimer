@@ -1,6 +1,7 @@
 var timeInterval;
 var modeVal = 0;
 var textSize = 10;
+var slowCt = 0;
 
 function giveInput() {
   var hours = document.getElementById('hours').value;
@@ -39,7 +40,12 @@ function giveInput() {
   } else {
     if (modeVal == 0) {
       startClock(hours, minutes, seconds, 'time');
-    } else {
+    }
+    else if (modeVal == 3) {
+       startSlow(hours, minutes, seconds, 'time');
+    }
+
+    else {
       startTimer(hours, minutes, seconds, 'time');
     }
     $('#inputBox').hide();
@@ -106,7 +112,6 @@ function startClock(h, m, s, id) {
 
 }
 
-//function for countdown timer to be implemented in the future
 
 function startTimer(h, m, s, id) {
 
@@ -153,6 +158,53 @@ function startTimer(h, m, s, id) {
 
 }
 
+function startSlow(h, m, s, id) {
+
+  var clock = document.getElementById(id);
+  var clockEnd = document.getElementById('timeEnd');
+
+  var total = +h * 3600 + +m * 60 + +s;
+  //console.log("total time = " + total)
+  var timer = total,
+    hours, minutes, seconds;
+
+  if (timeInterval) {
+    stopTimer();
+  }
+  timeInterval = setInterval(function() {
+
+    var t = parseInt(timer, 10);
+    hours = Math.floor(t / (60 * 60));
+
+    minutes = Math.floor((t / 60) % 60);
+
+    seconds = Math.floor(t % 60);
+
+    hours = hours < 10 ? "0" + hours : hours;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+    clock.innerHTML = hours + ":" + minutes + ":" + seconds;
+    clockEnd.innerHTML = checkTime(+h) + ":" + checkTime(+m) + ":" + checkTime(+s);
+
+    var elem = document.getElementById("curProgress");
+    var width = Math.round(((total - timer) / total) * 100);
+
+    width++;
+    elem.style.width = width + '%';
+
+    if (--timer < 0) {
+      clearInterval(timeInterval);
+      alert("Time is up!");
+      $('#inputBox').show();
+      $('#stopButton').hide();
+    }
+  }, 1020);
+
+}
+
+
+
 function checkTime(i) {
   if (i < 10) {
     i = "0" + i;
@@ -174,6 +226,14 @@ function countDown() {
   document.getElementById("stopWatch").style.backgroundColor = "#AAA";
   document.getElementById("countDown").style.backgroundColor = "#515151";
   modeVal = 1;
+  slowCt++;
+
+  if (slowCt >= 20) {
+     document.getElementById("countDown").style.backgroundColor = "#4286f4";
+     modeVal = 3;
+     
+  }
+
 
 }
 
@@ -181,6 +241,7 @@ function stopWatch() {
   document.getElementById("stopWatch").style.backgroundColor = "#515151";
   document.getElementById("countDown").style.backgroundColor = "#AAA";
   modeVal = 0;
+  slowCt = 0;
 
 }
 
