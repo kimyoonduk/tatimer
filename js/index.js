@@ -103,7 +103,6 @@ function startClock(h, m, s, id) {
     elem.style.width = width + '%';
 
     if (--timer < 0) {
-      clockEnd.innerHTML = "00:00:00";
       clearInterval(timeInterval);
       alert("Time is up!");
       $('#inputBox').show();
@@ -150,7 +149,7 @@ function startTimer(h, m, s, id) {
     elem.style.width = width + '%';
 
     if (--timer < 0) {
-      clockEnd.innerHTML = "00:00:00";
+      clock.innerHTML = "00:00:00";
       clearInterval(timeInterval);
       alert("Time is up!");
       $('#inputBox').show();
@@ -196,7 +195,7 @@ function startSlow(h, m, s, id) {
     elem.style.width = width + '%';
 
     if (--timer < 0) {
-      clockEnd.innerHTML = "00:00:00";
+      clock.innerHTML = "00:00:00";
       clearInterval(timeInterval);
       alert("Time is up!");
       $('#inputBox').show();
