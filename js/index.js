@@ -103,6 +103,7 @@ function startClock(h, m, s, id) {
     elem.style.width = width + '%';
 
     if (--timer < 0) {
+      clockEnd.innerHTML = "00:00:00";
       clearInterval(timeInterval);
       alert("Time is up!");
       $('#inputBox').show();
@@ -149,6 +150,7 @@ function startTimer(h, m, s, id) {
     elem.style.width = width + '%';
 
     if (--timer < 0) {
+      clockEnd.innerHTML = "00:00:00";
       clearInterval(timeInterval);
       alert("Time is up!");
       $('#inputBox').show();
@@ -194,6 +196,7 @@ function startSlow(h, m, s, id) {
     elem.style.width = width + '%';
 
     if (--timer < 0) {
+      clockEnd.innerHTML = "00:00:00";
       clearInterval(timeInterval);
       alert("Time is up!");
       $('#inputBox').show();
@@ -246,18 +249,26 @@ function stopWatch() {
 }
 
 function textPlus() {
-  textSize += 1;
+
+  if (textSize < 14) {
+     textSize += 1;
+  }
   changeText();
 }
 
 function textMinus() {
-  textSize -= 1;
+
+  if (textSize > 7) {
+     textSize -= 1;
+  }
   changeText();
 }
 
 function changeText() {
     if (textSize == 11) {
   document.getElementById("message").style.fontSize = "36px"; 
+  } else if (textSize == 13) {
+    document.getElementById("message").style.fontSize = "60px"; 
   } else if (textSize == 12) {
     document.getElementById("message").style.fontSize = "48px"; 
   } else if (textSize == 10) {
